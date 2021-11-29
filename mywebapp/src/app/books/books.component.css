@@ -1,0 +1,12 @@
+table.mat-table {
+  table-layout: fixed;
+  width: 100%;
+  display: table;
+}
+
+#addButton{
+  right: 45px;
+  bottom: 45px;
+  left: auto;
+  position: absolute;
+}
