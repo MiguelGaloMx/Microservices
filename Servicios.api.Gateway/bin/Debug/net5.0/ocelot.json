@@ -1,0 +1,158 @@
+{
+	//"Aggregates": [
+	//	{
+	//		"UpstreamPathTemplate": "/",
+	//		"RouteKeys": ["autor","book"]
+	//	}
+	//],
+	"Routes": [
+		{
+			"Key": "autor",
+			"DownstreamPathTemplate": "/api/Autor",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44302
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Autor",
+			"UpstreamHttpMethod": [ "POST", "UPDATE", "GET", "DELETE" ],
+			"AuthenticationOptions": {
+				"AuthenticationProviderKey": "Bearer",
+				"AllowedScopes": []
+			}
+		},
+		{
+			"Key": "autorById",
+			"DownstreamPathTemplate": "/api/Autor/{id}",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44302
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Autor/{id}",
+			"UpstreamHttpMethod": [ "GET" ],
+			"AuthenticationOptions": {
+				"AuthenticationProviderKey": "Bearer",
+				"AllowedScopes": []
+			}
+		},
+		{
+			"Key": "autorPag",
+			"DownstreamPathTemplate": "/api/Autor/pagination",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44302
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Autor/pagination",
+			"UpstreamHttpMethod": [ "GET" ],
+			"AuthenticationOptions": {
+				"AuthenticationProviderKey": "Bearer",
+				"AllowedScopes": []
+			}
+		},
+		{
+			"Key": "book",
+			"DownstreamPathTemplate": "/api/Libro",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44302
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Libro",
+			"UpstreamHttpMethod": [ "POST", "UPDATE", "GET", "DELETE" ],
+			"AuthenticationOptions": {
+				"AuthenticationProviderKey": "Bearer",
+				"AllowedScopes": []
+			}
+		},
+		{
+			"Key": "bookById",
+			"DownstreamPathTemplate": "/api/Libro/{id}",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44302
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Libro/{id}",
+			"UpstreamHttpMethod": [ "GET" ],
+			"AuthenticationOptions": {
+				"AuthenticationProviderKey": "Bearer",
+				"AllowedScopes": []
+			}
+		},
+		{
+			"Key": "bookPag",
+			"DownstreamPathTemplate": "/api/Libro/pagination",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44302
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Libro/pagination",
+			"UpstreamHttpMethod": [ "GET" ],
+			"AuthenticationOptions": {
+				"AuthenticationProviderKey": "Bearer",
+				"AllowedScopes": []
+			}
+		},
+		{
+			"Key": "user",
+			"DownstreamPathTemplate": "/api/Usuario",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44303
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Usuario",
+			"UpstreamHttpMethod": [ "GET" ],
+			"AuthenticationOptions": {
+				"AuthenticationProviderKey": "Bearer",
+				"AllowedScopes": []
+			}
+		},
+		{
+			"Key": "login",
+			"DownstreamPathTemplate": "/api/Usuario/login",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44303
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Usuario/login",
+			"UpstreamHttpMethod": [ "POST" ]
+		},
+		{
+			"Key": "register",
+			"DownstreamPathTemplate": "/api/Usuario/register",
+			"DownstreamScheme": "https",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "localhost",
+					"Port": 44303
+				}
+			],
+			"UpstreamPathTemplate": "/gateway/Usuario/register",
+			"UpstreamHttpMethod": [ "POST" ]
+		}
+	],
+	"GlobalConfiguration": {
+		"BaseUrl": "https://localhost:44301"
+	}
+}
